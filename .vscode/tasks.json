@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Start Backend (FastAPI)",
+      "type": "shell",
+      "command": "python main.py",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "MindScopeServers"
+      }
+    },
+    {
+      "label": "2. Start Frontend (Vite)",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "MindScopeServers"
+      }
+    },
+    {
+      "label": "🚀 Start Full Stack (Backend + Frontend)",
+      "dependsOn": [
+        "1. Start Backend (FastAPI)",
+        "2. Start Frontend (Vite)"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
