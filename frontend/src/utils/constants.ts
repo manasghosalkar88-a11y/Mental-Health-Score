@@ -1,6 +1,6 @@
 import type { StudentDataRequest } from '../types/api';
 
-export const BACKEND_URL = 'http://127.0.0.1:2200';
+export const BACKEND_URL = 'https://mental-health-score-5aht.onrender.com';
 export const PREDICT_ENDPOINT = `${BACKEND_URL}/predict`;
 export const OPENAPI_ENDPOINT = `${BACKEND_URL}/openapi.json`;
 export const DOCS_URL = `${BACKEND_URL}/docs`;
